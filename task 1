@@ -1,0 +1,19 @@
+a = int(input("Год первого события"))
+n = int(input("Разница во времени"))
+b = a+n
+while a<=10**9 and n<=10**9:
+  if a > 0 and n > 0:
+     ans = b
+  elif a > 0 and n < 0:
+     ans = b
+     if ans <= 0:
+        ans -= 1    
+  elif a < 0 and n > 0:
+     ans = b
+     if ans >= 0:
+       ans += 1    
+  elif a < 0 and n < 0:
+     ans = b
+     if ans >= 0:
+       ans += 1    
+  print(ans)
